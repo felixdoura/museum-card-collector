@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+
+# Entornos virtuales
+venv/
+env/
+.env/
+.venv/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Datos de jugadores (no subir progreso local)
+data/jugadores.json
+
+# Assets grandes (opcional)
+assets/*.wav
+assets/*.mp3
