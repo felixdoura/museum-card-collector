@@ -1,0 +1,98 @@
+[
+  {
+    "nombre": "El Louvre",
+    "museo": "Museo del Louvre",
+    "pais": "Francia",
+    "dificultad": "normal",
+    "imagen_path": "assets/cartas/louvre.png",
+    "dato_curioso": ""
+  },
+  {
+    "nombre": "Museo Británico",
+    "museo": "Museo Británico",
+    "pais": "Reino Unido",
+    "dificultad": "normal",
+    "imagen_path": "assets/cartas/british_museum.png",
+    "dato_curioso": ""
+  },
+  {
+    "nombre": "El Hermitage",
+    "museo": "Museo del Hermitage",
+    "pais": "Rusia",
+    "dificultad": "normal",
+    "imagen_path": "assets/cartas/hermitage.png",
+    "dato_curioso": ""
+  },
+  {
+    "nombre": "Antropología México",
+    "museo": "Museo Nacional de Antropología",
+    "pais": "México",
+    "dificultad": "normal",
+    "imagen_path": "assets/cartas/antropologia.png",
+    "dato_curioso": ""
+  },
+  {
+    "nombre": "Museos Vaticanos",
+    "museo": "Museos Vaticanos",
+    "pais": "Italia",
+    "dificultad": "normal",
+    "imagen_path": "assets/cartas/vaticano.png",
+    "dato_curioso": ""
+  },
+  {
+    "nombre": "El MET",
+    "museo": "Museo Metropolitano de Arte",
+    "pais": "Estados Unidos",
+    "dificultad": "normal",
+    "imagen_path": "assets/cartas/met.png",
+    "dato_curioso": ""
+  },
+  {
+    "nombre": "Museo Nacional de China",
+    "museo": "Museo Nacional de China",
+    "pais": "China",
+    "dificultad": "normal",
+    "imagen_path": "assets/cartas/china.png",
+    "dato_curioso": ""
+  },
+  {
+    "nombre": "El Prado",
+    "museo": "Museo del Prado",
+    "pais": "España",
+    "dificultad": "normal",
+    "imagen_path": "assets/cartas/prado.png",
+    "dato_curioso": ""
+  },
+  {
+    "nombre": "Museo Egipcio",
+    "museo": "Museo Nacional de Egipto",
+    "pais": "Egipto",
+    "dificultad": "normal",
+    "imagen_path": "assets/cartas/egipto.png",
+    "dato_curioso": ""
+  },
+  {
+    "nombre": "MASP",
+    "museo": "Museo de Arte de São Paulo",
+    "pais": "Brasil",
+    "dificultad": "normal",
+    "imagen_path": "assets/cartas/masp.png",
+    "dato_curioso": ""
+  },
+  {
+    "nombre": "Museo de Berlín",
+    "museo": "Museo de Historia Natural de Berlín",
+    "pais": "Alemania",
+    "dificultad": "especial",
+    "imagen_path": "assets/cartas/berlin.png",
+    "dato_curioso": "Alberga uno de los esqueletos de dinosaurio más grandes del mundo: el Giraffatitan brancai, con 13 metros de altura."
+  },
+  {
+    "nombre": "Museo de Tokio",
+    "museo": "Museo Nacional de Tokio",
+    "pais": "Japón",
+    "dificultad": "especial",
+    "imagen_path": "assets/cartas/tokio.png",
+    "dato_curioso": "Es el museo más antiguo de Japón, fundado en 1872, y posee más de 120.000 objetos en su colección permanente."
+  }
+]

@@ -1,0 +1,446 @@
+{
+  "Francia": [
+    {
+      "pregunta": "¿Cuál es la capital de Francia?",
+      "opciones": ["Londres", "Berlín", "París", "Madrid"],
+      "respuesta": "París"
+    },
+    {
+      "pregunta": "¿En qué río está ubicada la ciudad de París?",
+      "opciones": ["Rin", "Sena", "Loira", "Ródano"],
+      "respuesta": "Sena"
+    },
+    {
+      "pregunta": "¿Qué monumento icónico fue construido para la Exposición Universal de 1889 en París?",
+      "opciones": ["Arco del Triunfo", "Torre Eiffel", "Notre-Dame", "Palacio de Versalles"],
+      "respuesta": "Torre Eiffel"
+    },
+    {
+      "pregunta": "¿Cuál es la moneda oficial de Francia?",
+      "opciones": ["Franco", "Libra", "Euro", "Corona"],
+      "respuesta": "Euro"
+    },
+    {
+      "pregunta": "¿Quién fue el primer presidente de la Quinta República Francesa?",
+      "opciones": ["Napoleón Bonaparte", "Charles de Gaulle", "François Mitterrand", "Georges Pompidou"],
+      "respuesta": "Charles de Gaulle"
+    },
+    {
+      "pregunta": "¿Qué escritor francés escribió 'Los Miserables'?",
+      "opciones": ["Albert Camus", "Émile Zola", "Víctor Hugo", "Marcel Proust"],
+      "respuesta": "Víctor Hugo"
+    },
+    {
+      "pregunta": "¿Cuál es el deporte más popular en Francia?",
+      "opciones": ["Rugby", "Tenis", "Fútbol", "Ciclismo"],
+      "respuesta": "Fútbol"
+    }
+  ],
+  "Reino Unido": [
+    {
+      "pregunta": "¿Cuál es la capital del Reino Unido?",
+      "opciones": ["Edimburgo", "Dublín", "Cardiff", "Londres"],
+      "respuesta": "Londres"
+    },
+    {
+      "pregunta": "¿Qué río atraviesa la ciudad de Londres?",
+      "opciones": ["Támesis", "Mersey", "Severn", "Avon"],
+      "respuesta": "Támesis"
+    },
+    {
+      "pregunta": "¿Cómo se llama el reloj icónico ubicado en el Parlamento de Londres?",
+      "opciones": ["Big Harry", "Big Ben", "Tower Bell", "Westminster Clock"],
+      "respuesta": "Big Ben"
+    },
+    {
+      "pregunta": "¿Quién escribió 'Hamlet'?",
+      "opciones": ["Charles Dickens", "Oscar Wilde", "William Shakespeare", "Jane Austen"],
+      "respuesta": "William Shakespeare"
+    },
+    {
+      "pregunta": "¿En qué año se celebró el primer Torneo de Wimbledon?",
+      "opciones": ["1850", "1877", "1900", "1920"],
+      "respuesta": "1877"
+    },
+    {
+      "pregunta": "¿Cómo se llama la residencia oficial del Primer Ministro del Reino Unido?",
+      "opciones": ["Buckingham Palace", "10 Downing Street", "Windsor Castle", "Whitehall"],
+      "respuesta": "10 Downing Street"
+    },
+    {
+      "pregunta": "¿Qué banda británica de los años 60 fue conocida como 'Los Fab Four'?",
+      "opciones": ["The Rolling Stones", "The Who", "The Beatles", "Led Zeppelin"],
+      "respuesta": "The Beatles"
+    }
+  ],
+  "Rusia": [
+    {
+      "pregunta": "¿Cuál es la capital de Rusia?",
+      "opciones": ["San Petersburgo", "Moscú", "Novosibirsk", "Vladivostok"],
+      "respuesta": "Moscú"
+    },
+    {
+      "pregunta": "¿En qué ciudad se encuentra el Museo del Hermitage?",
+      "opciones": ["Moscú", "Novosibirsk", "San Petersburgo", "Kazán"],
+      "respuesta": "San Petersburgo"
+    },
+    {
+      "pregunta": "¿Cuál es el lago más profundo del mundo, ubicado en Rusia?",
+      "opciones": ["Lago Ladoga", "Lago Baikal", "Lago Onega", "Lago Báltico"],
+      "respuesta": "Lago Baikal"
+    },
+    {
+      "pregunta": "¿Quién fue el primer cosmonauta en viajar al espacio?",
+      "opciones": ["Neil Armstrong", "Valentina Tereshkova", "Yuri Gagarin", "Alexei Leonov"],
+      "respuesta": "Yuri Gagarin"
+    },
+    {
+      "pregunta": "¿Cómo se llama la famosa plaza ubicada en el centro de Moscú?",
+      "opciones": ["Plaza Roja", "Plaza de la Revolución", "Plaza Lenin", "Plaza Kremlin"],
+      "respuesta": "Plaza Roja"
+    },
+    {
+      "pregunta": "¿Quién escribió 'Crimen y Castigo'?",
+      "opciones": ["León Tolstói", "Máximo Gorki", "Iván Turguénev", "Fiódor Dostoievski"],
+      "respuesta": "Fiódor Dostoievski"
+    },
+    {
+      "pregunta": "¿Cuál es el instrumento musical más representativo de la música folclórica rusa?",
+      "opciones": ["Balalaika", "Bandoneón", "Cittern", "Mandolina"],
+      "respuesta": "Balalaika"
+    }
+  ],
+  "México": [
+    {
+      "pregunta": "¿Cuál es la capital de México?",
+      "opciones": ["Guadalajara", "Monterrey", "Ciudad de México", "Puebla"],
+      "respuesta": "Ciudad de México"
+    },
+    {
+      "pregunta": "¿Cuál fue la civilización prehispánica más poderosa del centro de México?",
+      "opciones": ["Maya", "Olmeca", "Azteca", "Zapoteca"],
+      "respuesta": "Azteca"
+    },
+    {
+      "pregunta": "¿Cómo se llama la antigua ciudad prehispánica con la pirámide del Sol y la pirámide de la Luna?",
+      "opciones": ["Chichén Itzá", "Uxmal", "Teotihuacán", "Monte Albán"],
+      "respuesta": "Teotihuacán"
+    },
+    {
+      "pregunta": "¿Qué pintora mexicana es famosa por sus autorretratos y su vida junto a Diego Rivera?",
+      "opciones": ["Remedios Varo", "María Izquierdo", "Leonora Carrington", "Frida Kahlo"],
+      "respuesta": "Frida Kahlo"
+    },
+    {
+      "pregunta": "¿Cuál es la moneda oficial de México?",
+      "opciones": ["Real", "Dólar", "Peso", "Corona"],
+      "respuesta": "Peso"
+    },
+    {
+      "pregunta": "¿En qué año se consumó la Independencia de México?",
+      "opciones": ["1810", "1821", "1836", "1848"],
+      "respuesta": "1821"
+    },
+    {
+      "pregunta": "¿Cómo se llama la celebración mexicana en honor a los difuntos?",
+      "opciones": ["Halloween", "Día de los Santos", "Día de Muertos", "Semana Santa"],
+      "respuesta": "Día de Muertos"
+    }
+  ],
+  "Italia": [
+    {
+      "pregunta": "¿Cuál es la capital de Italia?",
+      "opciones": ["Milán", "Nápoles", "Florencia", "Roma"],
+      "respuesta": "Roma"
+    },
+    {
+      "pregunta": "¿Quién pintó la Capilla Sixtina?",
+      "opciones": ["Leonardo da Vinci", "Rafael", "Caravaggio", "Miguel Ángel"],
+      "respuesta": "Miguel Ángel"
+    },
+    {
+      "pregunta": "¿En qué ciudad italiana se encuentra el Coliseo?",
+      "opciones": ["Venecia", "Florencia", "Roma", "Milán"],
+      "respuesta": "Roma"
+    },
+    {
+      "pregunta": "¿Cuál es la ciudad italiana famosa por sus canales y góndolas?",
+      "opciones": ["Génova", "Nápoles", "Pisa", "Venecia"],
+      "respuesta": "Venecia"
+    },
+    {
+      "pregunta": "¿Quién escribió 'La Divina Comedia'?",
+      "opciones": ["Petrarca", "Boccaccio", "Dante Alighieri", "Virgilio"],
+      "respuesta": "Dante Alighieri"
+    },
+    {
+      "pregunta": "¿Cuál es el volcán activo más alto de Europa, ubicado en Sicilia?",
+      "opciones": ["Vesubio", "Stromboli", "Etna", "Vulcano"],
+      "respuesta": "Etna"
+    },
+    {
+      "pregunta": "¿Cuál es el deporte más popular en Italia?",
+      "opciones": ["Baloncesto", "Ciclismo", "Fórmula 1", "Fútbol"],
+      "respuesta": "Fútbol"
+    }
+  ],
+  "Estados Unidos": [
+    {
+      "pregunta": "¿Cuál es la capital de los Estados Unidos?",
+      "opciones": ["Nueva York", "Los Ángeles", "Washington D.C.", "Chicago"],
+      "respuesta": "Washington D.C."
+    },
+    {
+      "pregunta": "¿Cuántos estados componen los Estados Unidos?",
+      "opciones": ["48", "49", "50", "52"],
+      "respuesta": "50"
+    },
+    {
+      "pregunta": "¿En qué año se firmó la Declaración de Independencia de los EE.UU.?",
+      "opciones": ["1776", "1783", "1812", "1789"],
+      "respuesta": "1776"
+    },
+    {
+      "pregunta": "¿Cómo se llama el río más largo de los Estados Unidos?",
+      "opciones": ["Colorado", "Hudson", "Misisipi", "Missouri"],
+      "respuesta": "Misisipi"
+    },
+    {
+      "pregunta": "¿Quién fue el primer presidente de los Estados Unidos?",
+      "opciones": ["Benjamin Franklin", "Thomas Jefferson", "Abraham Lincoln", "George Washington"],
+      "respuesta": "George Washington"
+    },
+    {
+      "pregunta": "¿En qué ciudad se encuentra la Estatua de la Libertad?",
+      "opciones": ["Boston", "Filadelfia", "Nueva York", "Washington D.C."],
+      "respuesta": "Nueva York"
+    },
+    {
+      "pregunta": "¿Cuál es la montaña más alta de los Estados Unidos?",
+      "opciones": ["Monte Whitney", "Monte McKinley (Denali)", "Pikes Peak", "Monte Rainier"],
+      "respuesta": "Monte McKinley (Denali)"
+    }
+  ],
+  "China": [
+    {
+      "pregunta": "¿Cuál es la capital de China?",
+      "opciones": ["Shanghái", "Hong Kong", "Pekín", "Cantón"],
+      "respuesta": "Pekín"
+    },
+    {
+      "pregunta": "¿Cuál es el río más largo de China?",
+      "opciones": ["Río Amarillo", "Río Yangtze", "Río Perla", "Río Mekong"],
+      "respuesta": "Río Yangtze"
+    },
+    {
+      "pregunta": "¿Cómo se llama la gran muralla construida para proteger China de invasiones del norte?",
+      "opciones": ["Muralla Imperial", "Gran Muralla China", "Muralla de los Ming", "Muralla de Qin"],
+      "respuesta": "Gran Muralla China"
+    },
+    {
+      "pregunta": "¿Cuál es el animal símbolo nacional de China?",
+      "opciones": ["Tigre de Bengala", "Dragón de Komodo", "Panda Gigante", "Grulla de Manchuria"],
+      "respuesta": "Panda Gigante"
+    },
+    {
+      "pregunta": "¿Cuál es la moneda oficial de China?",
+      "opciones": ["Won", "Yen", "Yuan", "Ringgit"],
+      "respuesta": "Yuan"
+    },
+    {
+      "pregunta": "¿Cuántos países comparte fronteras terrestres con China?",
+      "opciones": ["10", "12", "14", "16"],
+      "respuesta": "14"
+    },
+    {
+      "pregunta": "¿Quién fue el primer emperador de China unificada?",
+      "opciones": ["Kublai Kan", "Qin Shi Huang", "Han Wudi", "Tang Taizong"],
+      "respuesta": "Qin Shi Huang"
+    }
+  ],
+  "España": [
+    {
+      "pregunta": "¿Cuál es la capital de España?",
+      "opciones": ["Barcelona", "Sevilla", "Valencia", "Madrid"],
+      "respuesta": "Madrid"
+    },
+    {
+      "pregunta": "¿Quién pintó 'Las Meninas'?",
+      "opciones": ["Francisco Goya", "El Greco", "Diego Velázquez", "Pablo Picasso"],
+      "respuesta": "Diego Velázquez"
+    },
+    {
+      "pregunta": "¿Cómo se llama la famosa catedral inconclusa de Barcelona diseñada por Gaudí?",
+      "opciones": ["Catedral de Barcelona", "Sagrada Familia", "Basílica de Santa María del Mar", "Palau de la Música"],
+      "respuesta": "Sagrada Familia"
+    },
+    {
+      "pregunta": "¿Cuál es el río más largo de España?",
+      "opciones": ["Tajo", "Ebro", "Guadalquivir", "Duero"],
+      "respuesta": "Ebro"
+    },
+    {
+      "pregunta": "¿En qué año comenzó la Guerra Civil Española?",
+      "opciones": ["1931", "1933", "1936", "1939"],
+      "respuesta": "1936"
+    },
+    {
+      "pregunta": "¿Cuál es el festival de música y arte más famoso de España?",
+      "opciones": ["Primavera Sound", "FIB", "Mad Cool", "Sónar"],
+      "respuesta": "Primavera Sound"
+    },
+    {
+      "pregunta": "¿Quién escribió 'Don Quijote de la Mancha'?",
+      "opciones": ["Lope de Vega", "Francisco de Quevedo", "Miguel de Cervantes", "Tirso de Molina"],
+      "respuesta": "Miguel de Cervantes"
+    }
+  ],
+  "Egipto": [
+    {
+      "pregunta": "¿Cuál es la capital de Egipto?",
+      "opciones": ["Alejandría", "Luxor", "El Cairo", "Asuán"],
+      "respuesta": "El Cairo"
+    },
+    {
+      "pregunta": "¿Cuál es el río más importante de Egipto?",
+      "opciones": ["Río Congo", "Río Níger", "Río Nilo", "Río Zambeze"],
+      "respuesta": "Río Nilo"
+    },
+    {
+      "pregunta": "¿Cómo se llama la famosa estatua con cuerpo de león y cabeza humana ubicada en Giza?",
+      "opciones": ["El Coloso de Memnón", "La Esfinge", "El Faraón de Giza", "El Guardián del Nilo"],
+      "respuesta": "La Esfinge"
+    },
+    {
+      "pregunta": "¿Cuál era el sistema de escritura utilizado por los antiguos egipcios?",
+      "opciones": ["Cuneiforme", "Jeroglíficos", "Silabario", "Alfabeto Fenicio"],
+      "respuesta": "Jeroglíficos"
+    },
+    {
+      "pregunta": "¿Quién fue la última reina del Antiguo Egipto antes de la conquista romana?",
+      "opciones": ["Nefertiti", "Hatshepsut", "Cleopatra VII", "Tiy"],
+      "respuesta": "Cleopatra VII"
+    },
+    {
+      "pregunta": "¿En qué mar desemboca el Canal de Suez?",
+      "opciones": ["Mar Rojo", "Mar Mediterráneo", "Mar Arábigo", "Golfo Pérsico"],
+      "respuesta": "Mar Mediterráneo"
+    },
+    {
+      "pregunta": "¿Cuál es el desierto que cubre la mayor parte del territorio egipcio?",
+      "opciones": ["Desierto de Gobi", "Desierto del Sahara", "Desierto de Arabia", "Desierto de Libia"],
+      "respuesta": "Desierto del Sahara"
+    }
+  ],
+  "Brasil": [
+    {
+      "pregunta": "¿Cuál es la capital de Brasil?",
+      "opciones": ["Río de Janeiro", "São Paulo", "Brasilia", "Salvador"],
+      "respuesta": "Brasilia"
+    },
+    {
+      "pregunta": "¿Cuál es el río más caudaloso del mundo, que atraviesa Brasil?",
+      "opciones": ["Río Paraná", "Río Orinoco", "Río Amazonas", "Río São Francisco"],
+      "respuesta": "Río Amazonas"
+    },
+    {
+      "pregunta": "¿Cuántas veces ganó Brasil el Mundial de Fútbol?",
+      "opciones": ["4", "5", "6", "3"],
+      "respuesta": "5"
+    },
+    {
+      "pregunta": "¿Cuál es la moneda oficial de Brasil?",
+      "opciones": ["Peso", "Dólar", "Real", "Cruzeiro"],
+      "respuesta": "Real"
+    },
+    {
+      "pregunta": "¿Qué famosa estatua se encuentra en la cima del Corcovado en Río de Janeiro?",
+      "opciones": ["La Libertad", "Cristo Redentor", "El Ángel", "San Pablo"],
+      "respuesta": "Cristo Redentor"
+    },
+    {
+      "pregunta": "¿En qué idioma se habla en Brasil?",
+      "opciones": ["Español", "Francés", "Inglés", "Portugués"],
+      "respuesta": "Portugués"
+    },
+    {
+      "pregunta": "¿Cómo se llama el famoso carnaval que se celebra en Río de Janeiro?",
+      "opciones": ["Carnaval de Venecia", "Carnaval de Río", "Festa Junina", "Bumba Meu Boi"],
+      "respuesta": "Carnaval de Río"
+    }
+  ],
+  "Alemania": [
+    {
+      "pregunta": "¿Cuál es la capital de Alemania?",
+      "opciones": ["Múnich", "Hamburgo", "Berlín", "Fráncfort"],
+      "respuesta": "Berlín"
+    },
+    {
+      "pregunta": "¿Qué muro dividió a Berlín durante la Guerra Fría?",
+      "opciones": ["Muro de Brandeburgo", "Muro de Berlín", "Muro del Este", "Muro de Hierro"],
+      "respuesta": "Muro de Berlín"
+    },
+    {
+      "pregunta": "¿Cuál es el río más importante de Alemania?",
+      "opciones": ["Danubio", "Elba", "Rin", "Oder"],
+      "respuesta": "Rin"
+    },
+    {
+      "pregunta": "¿Quién compuso la Novena Sinfonía con el 'Himno a la Alegría'?",
+      "opciones": ["Mozart", "Bach", "Brahms", "Beethoven"],
+      "respuesta": "Beethoven"
+    },
+    {
+      "pregunta": "¿Cómo se llama el famoso festival de cerveza que se celebra en Múnich cada año?",
+      "opciones": ["Bierfest", "Oktoberfest", "Münchenfest", "Bavariafest"],
+      "respuesta": "Oktoberfest"
+    },
+    {
+      "pregunta": "¿Qué científico alemán desarrolló la Teoría de la Relatividad?",
+      "opciones": ["Max Planck", "Werner Heisenberg", "Albert Einstein", "Erwin Schrödinger"],
+      "respuesta": "Albert Einstein"
+    },
+    {
+      "pregunta": "¿En qué año cayó el Muro de Berlín?",
+      "opciones": ["1987", "1988", "1989", "1991"],
+      "respuesta": "1989"
+    }
+  ],
+  "Japón": [
+    {
+      "pregunta": "¿Cuál es la capital de Japón?",
+      "opciones": ["Osaka", "Kioto", "Tokio", "Hiroshima"],
+      "respuesta": "Tokio"
+    },
+    {
+      "pregunta": "¿Cómo se llama el monte más alto y sagrado de Japón?",
+      "opciones": ["Monte Kita", "Monte Fuji", "Monte Ontake", "Monte Tateyama"],
+      "respuesta": "Monte Fuji"
+    },
+    {
+      "pregunta": "¿Cuál es el sistema de escritura silábico más simple del japonés?",
+      "opciones": ["Kanji", "Romaji", "Hiragana", "Katakana"],
+      "respuesta": "Hiragana"
+    },
+    {
+      "pregunta": "¿Cómo se llama la ceremonia tradicional japonesa del té?",
+      "opciones": ["Ikebana", "Origami", "Chanoyu", "Kabuki"],
+      "respuesta": "Chanoyu"
+    },
+    {
+      "pregunta": "¿Cuál es el deporte de lucha tradicional japonés que enfrenta a dos luchadores en un ring circular?",
+      "opciones": ["Judo", "Karate", "Kendo", "Sumo"],
+      "respuesta": "Sumo"
+    },
+    {
+      "pregunta": "¿Cuál es la moneda oficial de Japón?",
+      "opciones": ["Won", "Yuan", "Baht", "Yen"],
+      "respuesta": "Yen"
+    },
+    {
+      "pregunta": "¿Qué ciudad japonesa fue la primera en recibir una bomba atómica en 1945?",
+      "opciones": ["Tokio", "Nagasaki", "Osaka", "Hiroshima"],
+      "respuesta": "Hiroshima"
+    }
+  ]
+}
