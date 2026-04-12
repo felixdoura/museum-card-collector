@@ -176,12 +176,12 @@ class GestorJuego:
         """
         self.jugador.registrar_partida()
         carta_desbloqueada = False
-
-        if self._carta_activa is not None:
-            requeridos = self._carta_activa.get_preguntas_requeridas()
-
+        carta_resultado = self._carta_activa  # Guardar referencia antes de resetear
+ 
+        if carta_resultado is not None:
+            requeridos = carta_resultado.get_preguntas_requeridas()
             if self._aciertos_ronda >= requeridos:
-                self.jugador.agregar_carta(self._carta_activa)
+                self.jugador.agregar_carta(carta_resultado)
                 carta_desbloqueada = True
 
         # Persistir progreso automáticamente. No hace falta guardar una partida sino que está pensado para que lo haga automáticamente
