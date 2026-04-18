@@ -20,6 +20,7 @@ import requests
 from models.jugador import Jugador
 from logic.crud import (crear_jugador, leer_jugador, jugador_existe, leer_ranking, eliminar_jugador)
 from logic.gestor_juego import GestorJuego
+from logic.wikipedia import obtener_extracto
 
 """Inicio del juego"""
 pygame.init()
@@ -118,13 +119,11 @@ def dibujar_encabezado(surface, titulo, subtitulo=""):
     """
     Dibuja el encabezado de una pantalla con título y subtítulo opcionales.
     """
-    dibujar_texto(surface, titulo, FUENTES["subtitulo"], DORADO,
-                  ANCHO // 2, 30, centrado=True)
+    dibujar_texto(surface, titulo, FUENTES["subtitulo"], DORADO, ANCHO // 2, 30, centrado=True)
     dibujar_linea_dorada(surface, 60, 68, ANCHO - 60, 68, 2)
     dibujar_linea_dorada(surface, 60, 72, ANCHO - 60, 72, 1)
     if subtitulo:
-        dibujar_texto(surface, subtitulo, FUENTES["pequeña"], GRIS_CLARO,
-                      ANCHO // 2, 80, centrado=True)
+        dibujar_texto(surface, subtitulo, FUENTES["pequeña"], GRIS_CLARO, ANCHO // 2, 80, centrado=True)
 
 
 """Definición de la clase boton"""
@@ -136,9 +135,7 @@ class Boton:
     Los atributos de los botones van a ser el area donde se pueda clickear, el texto, color cuando hacer el hover, el color base y si está activo
     """
 
-    def __init__(self, x, y, ancho, alto, texto,
-                 color_base=FONDO_PANEL, color_hover=GRIS_OSC,
-                 color_texto=BLANCO, radio=8):
+    def __init__(self, x, y, ancho, alto, texto, color_base=FONDO_PANEL, color_hover=GRIS_OSC, color_texto=BLANCO, radio=8):
         """
         Inicializa un botón con su posición, tamaño y colores.
         """
@@ -171,10 +168,7 @@ class Boton:
         """
         Verifica si el botón fue clickeado.
         """
-        return (self.activo and
-                evento.type == pygame.MOUSEBUTTONDOWN and
-                evento.button == 1 and
-                self.rect.collidepoint(evento.pos))
+        return (self.activo and evento.type == pygame.MOUSEBUTTONDOWN and evento.button == 1 and self.rect.collidepoint(evento.pos))
 
 
 """Definicion del campo de texto"""
@@ -212,7 +206,7 @@ class CampoTexto:
 
     def actualizar(self, dt):
         """
-        Actualiza el parpadeo del cursor.
+        Actualiza el parpadeo del cursor
         """
         self._cursor_timer += dt
         if self._cursor_timer >= 500:
@@ -387,15 +381,27 @@ class PantallaMenu(Pantalla):
             Boton(cx - 200, y0,         400, 50, "Jugar", color_base=(30, 50, 80), color_hover=(45, 75, 120), color_texto=AZUL_ACC),
             Boton(cx - 200, y0 + sep,   400, 50, "Mi Colección", color_base=FONDO_PANEL, color_hover=GRIS_OSC, color_texto=BLANCO),
             Boton(cx - 200, y0 + sep*2, 400, 50, "Ranking", color_base=FONDO_PANEL, color_hover=GRIS_OSC, color_texto=BLANCO),
-            Boton(cx - 200, y0 + sep*3, 400, 50, "Salir", color_base=(50, 22, 22), color_hover=(80, 35, 35), color_texto=ROJO_ACC),
+            Boton(cx - 200, y0 + sep*3, 400, 50, "Eliminar perfil", color_base=(40, 22, 22), color_hover=(70, 30, 30), color_texto=ROJO_ACC),
+            Boton(cx - 200, y0 + sep*4, 400, 50, "Salir", color_base=FONDO_PANEL, color_hover=GRIS_OSC, color_texto=GRIS_CLARO),
         ]
-        self.acciones = ["cartas", "coleccion", "ranking", "salir"]
+        self.acciones = ["cartas", "coleccion", "ranking", "confirmar_eliminar", "salir"]
+        self._confirmar_eliminar = False
 
     def manejar_eventos(self, eventos):
         for ev in eventos:
             for i, btn in enumerate(self.botones):
                 if btn.fue_clickeado(ev):
-                    self.siguiente = self.acciones[i]
+                    accion = self.acciones[i]
+                    if accion == "confirmar_eliminar":
+                        self._confirmar_eliminar = not self._confirmar_eliminar
+                    else:
+                        self.siguiente = accion
+            if self._confirmar_eliminar and ev.type == pygame.KEYDOWN:
+                if ev.key == pygame.K_s:
+                    eliminar_jugador(self.jugador.nombre)
+                    self.siguiente = "login"
+                elif ev.key == pygame.K_n:
+                    self._confirmar_eliminar = False
 
     def actualizar(self, dt):
         pos = pygame.mouse.get_pos()
@@ -430,6 +436,16 @@ class PantallaMenu(Pantalla):
         for btn in self.botones:
             btn.dibujar(self.surface)
 
+        if self._confirmar_eliminar:
+            overlay = pygame.Surface((ANCHO, ALTO), pygame.SRCALPHA)
+            overlay.fill((0, 0, 0, 160))
+            self.surface.blit(overlay, (0, 0))
+            dialogo = pygame.Rect(ANCHO // 2 - 240, ALTO // 2 - 80, 480, 160)
+            dibujar_rect_redondeado(self.surface, FONDO_PANEL, dialogo, radio=12, borde=2, color_borde=ROJO_ACC)
+            dibujar_texto(self.surface, "¿Eliminar perfil?", FUENTES["h2"], ROJO_ACC, ANCHO // 2, ALTO // 2 - 60, centrado=True)
+            dibujar_texto(self.surface, f"Se borrará el perfil de '{self.jugador.nombre}' permanentemente.", FUENTES["pequeña"], GRIS_CLARO, ANCHO // 2, ALTO // 2 - 28, centrado=True)
+            dibujar_texto(self.surface, "Presioná  S  para confirmar  |  N  para cancelar", FUENTES["cuerpo_b"], DORADO, ANCHO // 2, ALTO // 2 + 10, centrado=True)
+
 
 """Selección de las cartas"""
 
@@ -437,7 +453,6 @@ class PantallaCartas(Pantalla):
     """
     Muestra la grilla de cartas disponibles para desbloquear. El jugador selecciona una carta para iniciar una ronda de preguntas.
     """
-
     def __init__(self, surface, jugador: Jugador, gestor: GestorJuego):
         super().__init__(surface)
         self.jugador   = jugador
@@ -449,6 +464,7 @@ class PantallaCartas(Pantalla):
         self.btn_jugar  = Boton(ANCHO // 2 - 100, 630, 200, 44, "¡Jugar esta carta!", color_base=(30, 60, 40), color_hover=(45, 90, 60), color_texto=VERDE_ACC)
         self.btn_jugar.activo = False
         self.scroll = 0
+        self._extracto_wiki = ""
         self._construir_grilla()
 
     def _construir_grilla(self):
@@ -475,8 +491,11 @@ class PantallaCartas(Pantalla):
                 for i, rect in enumerate(self.rects_cartas):
                     r_scroll = rect.move(0, self.scroll)
                     if r_scroll.collidepoint(ev.pos):
-                        self.carta_sel = self.disponibles[i]
-                        self.btn_jugar.activo = True
+                        nueva = self.disponibles[i]
+                        if nueva != self.carta_sel:
+                            self.carta_sel = nueva
+                            self.btn_jugar.activo = True
+                            self._extracto_wiki = obtener_extracto(nueva.museo)
 
     def actualizar(self, dt):
         pos = pygame.mouse.get_pos()
@@ -485,12 +504,10 @@ class PantallaCartas(Pantalla):
 
     def dibujar(self):
         dibujar_fondo(self.surface)
-        dibujar_encabezado(self.surface, "SELECCIONAR CARTA",
-                           "Elegí un museo para intentar desbloquear su carta")
+        dibujar_encabezado(self.surface, "SELECCIONAR CARTA", "Elegí un museo para intentar desbloquear su carta")
 
         if not self.disponibles:
-            dibujar_texto(self.surface, "🎊 ¡Desbloqueaste todas las cartas!",
-                          FUENTES["subtitulo"], DORADO, ANCHO // 2, 300, centrado=True)
+            dibujar_texto(self.surface, "🎊 ¡Desbloqueaste todas las cartas!", FUENTES["subtitulo"], DORADO, ANCHO // 2, 300, centrado=True)
         else:
             for i, (carta, rect) in enumerate(zip(self.disponibles, self.rects_cartas)):
                 r = rect.move(0, self.scroll)
@@ -516,8 +533,29 @@ class PantallaCartas(Pantalla):
 
         self.btn_volver.dibujar(self.surface)
         if self.carta_sel:
+            # Panel inferior con info de Wikipedia del museo seleccionado
+            panel_info = pygame.Rect(30, 548, ANCHO - 60, 82)
+            dibujar_rect_redondeado(self.surface, FONDO_PANEL, panel_info, radio=8, borde=1, color_borde=DORADO_OSC)
+            dibujar_texto(self.surface, f"{self.carta_sel.nombre}  —  {self.carta_sel.museo}", FUENTES["cuerpo_b"], DORADO, 46, 556)
+            extracto = self._extracto_wiki or "Cargando información..."
+            palabras = extracto.split()
+            linea, lineas = "", []
+            for p in palabras:
+                prueba = linea + " " + p if linea else p
+                if FUENTES["pequeña"].size(prueba)[0] < ANCHO - 100:
+                    linea = prueba
+                else:
+                    lineas.append(linea)
+                    linea = p
+                    if len(lineas) == 2:
+                        break
+            if linea and len(lineas) < 2:
+                lineas.append(linea)
+            y_w = 576
+            for ln in lineas[:2]:
+                dibujar_texto(self.surface, ln, FUENTES["pequeña"], GRIS_CLARO, 46, y_w)
+                y_w += 17
             self.btn_jugar.dibujar(self.surface)
-            dibujar_texto(self.surface, f"Seleccionado: {self.carta_sel.nombre} — {self.carta_sel.museo}", FUENTES["pequeña"], DORADO, ANCHO // 2, 610, centrado=True)
 
 
 """Pantalla de ronda actual"""
@@ -812,7 +850,6 @@ class PantallaRanking(Pantalla):
     """
     Muestra el ranking global de jugadores ordenado por puntaje descendente.
     """
-
     def __init__(self, surface):
         super().__init__(surface)
         self.jugadores  = leer_ranking()
@@ -879,12 +916,14 @@ class Interfaz:
         Crea e instancia la pantalla correspondiente al destino indicado.
         """
         if destino == "login":
+            self.jugador = None
+            self.gestor  = None
             self.pantalla_actual = PantallaLogin(self.screen)
 
         elif destino == "menu":
             if hasattr(self.pantalla_actual, "_jugador_resultado") and \
                self.pantalla_actual._jugador_resultado:
-                self.jugador = self.pantalla_actual._jugador_resultado
+               self.jugador = self.pantalla_actual._jugador_resultado
             self.gestor = GestorJuego(self.jugador)
             self.pantalla_actual = PantallaMenu(self.screen, self.jugador)
 
@@ -894,8 +933,7 @@ class Interfaz:
 
         elif destino == "ronda":
             self.carta_activa = self.pantalla_actual.carta_sel
-            self.pantalla_actual = PantallaRonda(
-                self.screen, self.jugador, self.gestor, self.carta_activa)
+            self.pantalla_actual = PantallaRonda(self.screen, self.jugador, self.gestor, self.carta_activa)
 
         elif destino == "resultado":
             self.resultado_ronda = getattr(self.pantalla_actual, "resultado", None)
@@ -907,8 +945,7 @@ class Interfaz:
                 self.screen, self.resultado_ronda, self.jugador)
 
         elif destino == "coleccion":
-            self.pantalla_actual = PantallaColeccion(
-                self.screen, self.jugador, self.gestor)
+            self.pantalla_actual = PantallaColeccion(self.screen, self.jugador, self.gestor)
 
         elif destino == "ranking":
             self.pantalla_actual = PantallaRanking(self.screen)

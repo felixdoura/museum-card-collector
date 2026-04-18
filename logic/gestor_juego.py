@@ -190,8 +190,8 @@ class GestorJuego:
         resultado = {
             "carta_desbloqueada": carta_desbloqueada,
             "aciertos": self._aciertos_ronda,
-            "requeridos": self._carta_activa.get_preguntas_requeridas() if self._carta_activa else 0,
-            "carta": self._carta_activa
+            "requeridos": carta_resultado.get_preguntas_requeridas() if carta_resultado else 0,
+            "carta": carta_resultado
         }
 
         # Resetear estado de la ronda
